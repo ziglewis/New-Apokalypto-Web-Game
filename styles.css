@@ -86,9 +86,19 @@
 
     0%{margin-left: -10%}
     
-    50%{margin-left: 10%}
+    50%{margin-left: 10%;
+      /* font-size: xx-large; */
+    }
 
-    100%{margin-left: -10%}
+     100%{margin-left: -10%}  
+
+    /* 0%{font-size:xx-large;}
+    
+    50%{font-size: large;}
+
+    100%{font-size: xx-large;} */
+
+   
 
     
     
@@ -228,11 +238,12 @@
    
    @media (max-width : 800px) {
        
-       main{
+       main, body{
        width: 100%;
        margin: 0px;
        box-sizing: border-box;
        }
+       
        
        .balls-set-1 button, .balls-set-2 button, .balls-set-3 button{
        width: 3rem;
