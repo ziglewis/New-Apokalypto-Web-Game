@@ -165,6 +165,8 @@
       function random(){
            
             g =  value[Math.floor (Math.random() * value.length)]
+            let humanSound = new Audio('human.wav')  
+              humanSound.play()
             if (gameOver == true) {return }
           //   p =  value[Math.floor (Math.random() * value.length)]
           //   v =  balls[Math.floor (Math.random() * balls.length)]
@@ -195,8 +197,13 @@
                   LewisTurn = true
                   console.log(LewisTurn)
                    chat.textContent = "...Wait buddy, it's Lewis turn!"
+                   chat.className = "shrink-and-grow"
+
               
                   await new Promise(resolve => setTimeout(resolve, 3000));
+
+                  let computerSound = new Audio('computer.wav')  
+                computerSound.play()
                    p =  value[Math.floor (Math.random() * value.length)]
                    v =  balls[Math.floor (Math.random() * balls.length)]
                    score2 += p 
@@ -211,6 +218,9 @@
                      async function delayBoard() {
               
                   await new Promise(resolve => setTimeout(resolve, 1200));
+
+                  chat.classList.remove("shrink-and-grow")
+
                    previousPlayerTwoScore.textContent += p + ", "
                     playerTwoScore.textContent = money + score2 
                     v.disabled = true

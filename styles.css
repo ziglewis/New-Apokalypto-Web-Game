@@ -73,6 +73,19 @@
     border: 2px solid rgba(216, 200, 189, 0.767);
     
    }
+
+   @keyframes slide2 {
+
+    0%{margin-left: -10%}
+    
+    50%{margin-left: 10%}
+
+    100%{margin-left: -10%}
+
+    
+    
+     }
+     
    
             
 @keyframes slide {
@@ -92,7 +105,6 @@
     
     @keyframes spin {
 
-
    0% {
             transform: rotate(0deg);
           }
@@ -101,7 +113,14 @@
           }
 
     }
+.shrink-and-grow {
 
+  animation-name: slide2;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+}
     
 
    
