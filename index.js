@@ -202,7 +202,9 @@
               
                   await new Promise(resolve => setTimeout(resolve, 3000));
 
-                  let computerSound = new Audio('computer.wav')  
+                  let computerSound = new Audio('computer.wav') 
+                  let  winSound = new Audio ("winner.wav")
+                  let  looseSound = new Audio ("loser.wav")
                 computerSound.play()
                    p =  value[Math.floor (Math.random() * value.length)]
                    v =  balls[Math.floor (Math.random() * balls.length)]
@@ -334,6 +336,10 @@
            
            //statement for games far beyond reach in round four
             else if (w === 4 && score1 > score2 && difference >270) {
+          
+            winSound.play()
+      
+
            message =  msgSevenWin[Math.floor(Math.random() * msgSevenWin.length)]
            turnsLeft = "GAME WON! it's now too far for Lewis to come back. click on 'play again' " 
            playAgain.disabled = false
@@ -345,6 +351,9 @@
             else if (w === 4 && score1 < score2 && difference >270) {
             message =  msgSevenLoose[Math.floor(Math.random() * msgSevenLoose.length)] 
            turnsLeft = "GAME OVER! It's now too far beyond your reach. click on 'play again' "
+
+           looseSound.play()
+
            playAgain.disabled = false
             gameOver = true
            // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
@@ -368,6 +377,8 @@
             else if (w === 5 && score1 > score2 && difference >180) {
            message =  msgSevenWin[Math.floor(Math.random() * msgSevenWin.length)]
            turnsLeft = "GAME WON! it's now too far for Lewis to come back. click on 'play again' " 
+           winSound.play()
+
            playAgain.disabled = false
             gameOver = true
             // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
@@ -377,6 +388,9 @@
             else if (w === 5 && score1 < score2 && difference >180) {
             message =  msgSevenLoose[Math.floor(Math.random() * msgSevenLoose.length)]
            turnsLeft = "GAME OVER! It's now too far beyond your reach. click on 'play again' "
+        
+           looseSound.play()
+
            playAgain.disabled = false
             gameOver = true
            
@@ -404,6 +418,9 @@
             else if (w === 6 && score1 > score2 && difference >90) {
            message =  msgSevenWin[Math.floor(Math.random() * msgSevenWin.length)] 
            turnsLeft = "GAME WON! it's now too far for Lewis to come back. click on 'play again' " 
+
+           winSound.play()
+        
            playAgain.disabled = false
             gameOver = true
             // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
@@ -413,6 +430,9 @@
             else if (w === 6 && score1 < score2 && difference >90) {
             message =  msgSevenLoose[Math.floor(Math.random() * msgSevenLoose.length)] 
            turnsLeft = "GAME OVER! It's now too far beyond your reach. click on 'play again' "
+
+            looseSound.play()
+
            playAgain.disabled = false
             gameOver = true
            
@@ -424,6 +444,9 @@
          // if statement for the Seventh and final round of the game
            
         else if (w === 7 && score1 > score2) {
+
+          winSound.play()
+
           message = msgSevenWin[Math.floor(Math.random() * msgSevenWin.length)]  
           turnsLeft = "GAME WON! click 'play again' to continue..."
            gameOver = true
@@ -432,6 +455,9 @@
       balls[0].disabled = true}
            
            else if (w === 7 && score1 < score2) {
+
+            looseSound.play()
+
            message = msgSevenLoose[Math.floor(Math.random() * msgSevenLoose.length)] 
            turnsLeft = "GAME OVER! click 'play again ' to continue... "
            playAgain.disabled = false
@@ -440,6 +466,9 @@
       balls[0].disabled = true
              } 
            else if (w === 7 && score1 === score2) {
+
+            winSound.play()
+  
            message = tie7[Math.floor(Math.random() * tie7.length)] 
            turnsLeft = "GAME TIED! click 'play again' to continue... " 
            playAgain.disabled = false

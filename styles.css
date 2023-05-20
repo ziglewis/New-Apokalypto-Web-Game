@@ -31,6 +31,14 @@
     
    }
    
+   #version {
+    font-size:x-small;
+    position: absolute;
+    padding: 2px;
+    
+   }
+
+
    .top-screen{
        display: flex;
        gap: 2%;
