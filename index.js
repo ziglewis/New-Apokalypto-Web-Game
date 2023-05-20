@@ -778,7 +778,7 @@
               }
   
     
-    //I modified this app from the parent Apokalypto after making a presentation at IG-HUb. date remodified is May-20-2023.
+    //I modified this app from the parent Apokalypto after making a presentation at IG-HUb. Date remodified is May-20-2023. Took me about 10 hours
   
     // THANK YOU JESUS!
   
