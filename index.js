@@ -192,11 +192,11 @@
             playerOneScore.textContent = money + score1
           //   playerTwoScore.textContent = money + score2 
             
-                          async function test() {
+                          async function delayComputerBallSelection() {
           
                   LewisTurn = true
                   console.log(LewisTurn)
-                   chat.textContent = "...Wait buddy, it's Lewis turn!"
+                   chat.textContent = "...Wait buddy, it's ZigLewis's turn!"
                    chat.className = "shrink-and-grow"
 
               
@@ -212,12 +212,12 @@
                     v.textContent = p
                   //   v.style.color = "blue"
                     Object.assign(v.style,{fontsize:"12px", color: "red", "animation-name": "spin", 
-      "animation-duration": "1s",
-      "animation-timing-function": "linear"
-      });
+                    "animation-duration": "1s",
+                     "animation-timing-function": "linear"
+                    });
           
       
-                     async function delayBoard() {
+                     async function delayComputerScore() {
               
                   await new Promise(resolve => setTimeout(resolve, 1200));
 
@@ -345,7 +345,7 @@
            playAgain.disabled = false
            gameOver = true
             // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
-           balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;  balls[5].disabled = true;  balls[6].disabled = true; 
+          //  balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;  balls[5].disabled = true;  balls[6].disabled = true; 
            }
             
             else if (w === 4 && score1 < score2 && difference >270) {
@@ -357,8 +357,8 @@
            playAgain.disabled = false
             gameOver = true
            // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
-             balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;  balls[5].disabled = true;  balls[6].disabled = true; 
-          
+            //  balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;  balls[5].disabled = true;  balls[6].disabled = true; 
+          // since I now set gameover = true, no need to disable the remaining balls, so the user can still see their content if they wish but it wont add up to their scores because its game over.
             } 
            
              // if statement for the Fifth round of the game
@@ -382,7 +382,7 @@
            playAgain.disabled = false
             gameOver = true
             // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
-           balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;
+          //  balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;
            }
             
             else if (w === 5 && score1 < score2 && difference >180) {
@@ -395,7 +395,7 @@
             gameOver = true
            
            // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
-             balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;
+            //  balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;  balls[3].disabled = true;  balls[4].disabled = true;
       }
             
            
@@ -424,7 +424,7 @@
            playAgain.disabled = false
             gameOver = true
             // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
-           balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;
+          //  balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;
            }
             
             else if (w === 6 && score1 < score2 && difference >90) {
@@ -437,7 +437,7 @@
             gameOver = true
            
            // this ensures that the rest of the balls are disabled (for now I couldn't call them all at once, maybe as I keep learning.)
-             balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;
+            //  balls[0].disabled = true;  balls[1].disabled = true;  balls[2].disabled = true;
             }
   
       
@@ -486,10 +486,10 @@
       roundsEl.textContent = turnsLeft
       LewisTurn = false
                      }
-                     delayBoard();
+                     delayComputerScore();
       }
   
-                  test();
+      delayComputerBallSelection();
   }
   
   
