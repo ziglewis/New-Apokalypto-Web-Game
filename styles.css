@@ -220,32 +220,53 @@
        font-size: large;
        padding: 1%;
        border-radius: 20px;
-       border: none;
-       color: black;
+       color: white;
+       background-color:rgba(236, 10, 29, 0.616);
+       border: 3px solid white;
+       text-shadow: 0px 0px 1px black;
        margin: 2% auto;
        /* background-image: url("back29.jpeg"); */
        opacity: 0.9;
-       background-color:white;
+       
        background-repeat: no-repeat;
 
    }
 
    #new-game:disabled{
     
-    color: rgb(155, 137, 137);
-    background-color: rgba(216, 200, 189, 0.767);
+    color: rgba(255, 255, 255, 0.815);
+    background-color:rgba(236, 10, 29, 0.281);
     border-radius: 15px;
     width: 30%;
     padding: 1%;
+    cursor: not-allowed;
     font-size:small;
+    font-weight: bolder;
+    border: 2px solid rgba(255, 255, 255, 0.329);
+    
     /* background-image: url("back29.jpeg"); */
     opacity: 0.95;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+   }
+
+   #new-game:disabled:hover{
+    color: rgba(255, 255, 255, 0.815);
+    background-color:rgba(236, 10, 29, 0.281);
+    border-radius: 15px;
+    width: 30%;
+    padding: 1%;
+    cursor: not-allowed;
+    font-size:small;
+    font-weight: bolder;
+    border: 2px solid rgba(255, 255, 255, 0.329);
+    
    }
 
    #new-game:hover{
-   background-color: rgba(216, 200, 189, 0.767);
+   background-color: white;
+   color:rgba(236, 10, 29, 0.616);
+   border: 2px solid rgba(236, 10, 29, 0.616);
    
   
    }
