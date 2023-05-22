@@ -18,7 +18,7 @@
    .container{
     background-image: url("images/purple2.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment:fixed;
     border-radius: 15px;
     width: fit-content;
     box-sizing: border-box;
@@ -97,6 +97,7 @@
       
       text-shadow: 0px 0px 3px black;
       padding: 3%;
+      min-height: 120px;
       
 
      }
